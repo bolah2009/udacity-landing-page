@@ -1,0 +1,44 @@
+name: Linter Check and GitHub pages deploy
+
+on:
+  push:
+    branches: [master, development]
+  pull_request:
+    branches: [master, development]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install required dependency for node
+        run: |
+          yarn install
+      - name: Run StyleLint
+        run: |
+          yarn lint:check
+      - name: Run Prettier
+        run: |
+          yarn format:check
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Deploy 🚀
+        uses: github-actions-x/commit@v2.5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: Bola Ahmed Buari
+          email: bola_ahmed2002@yahoo.com
+          push-branch: gh-pages
+          commit-message: '🚀 Deploy to github pages'
+          rebase: 'true'

@@ -1,0 +1,40 @@
+{
+  "name": "udacity-landing-page",
+  "version": "1.0.0",
+  "description": "A personal blog website",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "prettier": "1.19.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1"
+  },
+  "scripts": {
+    "format": "npx prettier  --write '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "format:check": "npx prettier  --check '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "lint": "npx eslint '**/*.js' --fix && npx stylelint '**/*.css' --fix",
+    "lint:check": "npx eslint '**/*.js' && npx stylelint '**/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolah2009/udacity-landing-page.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS"
+  ],
+  "author": "Bola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolah2009/udacity-landing-page/issues"
+  },
+  "homepage": "https://github.com/bolah2009/udacity-landing-page#readme"
+}
