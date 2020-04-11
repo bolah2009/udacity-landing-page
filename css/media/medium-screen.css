@@ -1,0 +1,48 @@
+.container {
+  width: 738px;
+}
+
+.menu-thumb-wrapper {
+  width: 50%;
+}
+
+.team-member {
+  width: 33.333%;
+  padding: 0 15px;
+}
+
+.address,
+.open-hour {
+  width: 50%;
+}
+
+.social,
+.reservation {
+  width: 30%;
+}
+
+.social,
+.copyright-text {
+  display: block;
+}
+
+.copyright-text p {
+  padding-right: 0;
+}
+
+.nav {
+  background: none;
+  color: #fff;
+}
+
+.nav-list {
+  flex-direction: row;
+  width: 52%;
+  padding-right: 2%;
+  order: 0;
+  align-items: center;
+}
+
+.navbar-toggle {
+  display: none;
+}

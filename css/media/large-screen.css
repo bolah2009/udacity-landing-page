@@ -1,0 +1,29 @@
+.container {
+  width: 962px;
+}
+
+.menu-thumb-wrapper {
+  width: 33.333%;
+}
+
+.map-section,
+.form-section {
+  width: 50%;
+}
+
+.address,
+.reservation {
+  width: 25%;
+}
+
+.open-hour {
+  width: 33.333%;
+}
+
+.social {
+  width: 16.667%;
+}
+
+.button {
+  padding: 10px 25px;
+}

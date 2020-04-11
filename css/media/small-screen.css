@@ -1,0 +1,19 @@
+.container {
+  width: 546px;
+}
+
+.address {
+  width: 50%;
+}
+
+.open-hour {
+  width: 60%;
+}
+
+.reservation {
+  width: 50%;
+}
+
+.social {
+  width: 100%;
+}

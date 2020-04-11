@@ -1,0 +1,9 @@
+@import './base.css';
+@import './main.css';
+
+/* Media queries import */
+
+@import 'media/small-screen.css' screen and (min-width: 576px);
+@import 'media/medium-screen.css' screen and (min-width: 798px);
+@import 'media/large-screen.css' screen and (min-width: 992px);
+@import 'media/xlarge-screen.css' screen and (min-width: 1200px);
