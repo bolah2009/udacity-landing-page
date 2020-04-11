@@ -2,8 +2,7 @@
 
 This is the second project of the [Udacity Frontend Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
-
-The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-515-eatery) by dynamically rendering it using JavaScript DOM manipulation. Only JavaScript is used to generate the entire contents of the website. The features of the page also include:
+The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-515-eatery) by dynamically rendering it using JavaScript DOM manipulation. JavaScript is used to generate major contents of the website. The features of the page also include:
 
 - HTML
   - HTML5 Semantic elements
@@ -12,21 +11,18 @@ The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-
   - CSS Flexbox
   - CSS Animations
   - CSS Media query
-- Dev Tools
-  - Webpack
 - Linters
   - Eslint
-  - Stylelint
+  - StyleLint
 - JavaScript
-- ES6 Modules
-- DocumentFragment
-- DOM Manipulation
-- Events
+  - DocumentFragment
+  - DOM Manipulation
+  - Events
 
 ## Live link
 
 [COMING SOON]
- 
+
 ## ScreenShot
 
 [COMING SOON]
@@ -70,8 +66,6 @@ and to have it actually fix (to the best of its ability) any format issues, run:
 yarn format
 ```
 
-
-
 ## Style Guides
 
 - [CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
@@ -84,7 +78,6 @@ yarn format
 - Github: [@bolah2009](https://github.com/bolah2009)
 - Twitter: [@bolah2009](https://twitter.com/bolah2009)
 - Linkedin: [@bolah2009](https://www.linkedin.com/in/bolah2009/)
-
 
 ## 🤝 Contributing
 
