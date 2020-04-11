@@ -1,7 +1,7 @@
 {
   "name": "udacity-landing-page",
   "version": "1.0.0",
-  "description": "A personal blog website",
+  "description": "Dynamically rendering a simple restaurant homepage using JavaScript DOM manipulation",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
