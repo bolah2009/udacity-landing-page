@@ -963,9 +963,12 @@
             <span data-id="home">Food Palace</span>
           </div>
         </button>
-        <ul class="nav-list d-none-md">
+        <div class="button current-section d-none-md">home</div>
+        <ul class="nav-list hide">
           <li class="nav-list-item">
-            <button class="button" data-id="home" type="button">home</button>
+            <button class="button active-nav" data-id="home" type="button">
+              home
+            </button>
           </li>
           <li class="nav-list-item">
             <button class="button" data-id="about" type="button">about</button>
@@ -982,31 +985,12 @@
             </button>
           </li>
         </ul>
-        <ul class="nav-list small d-none">
-          <li class="nav-list-item">
-            <button class="button" data-id="home" type="button">home</button>
-          </li>
-          <li class="nav-list-item">
-            <button class="button" data-id="about" type="button">about</button>
-          </li>
-          <li class="nav-list-item">
-            <button class="button" data-id="team" type="button">chef</button>
-          </li>
-          <li class="nav-list-item">
-            <button class="button" data-id="menu" type="button">menu</button>
-          </li>
-          <li class="nav-list-item">
-            <button class="button" data-id="contact" type="button">
-              contact
-            </button>
-          </li>
-        </ul>
-        <button class="navbar-toggle">
+        <a href="#reservation" class="button d-none d-block-md">Reservation</a>
+        <button class="navbar-toggle d-none-md">
           <span class="icon icon-bar"></span>
           <span class="icon icon-bar"></span>
           <span class="icon icon-bar"></span>
         </button>
-        <a href="#reservation" class="button d-none-md">Reservation</a>
       </nav>
       <main class="main">
         <section class="home" id="home">

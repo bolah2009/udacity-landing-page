@@ -55,6 +55,10 @@
   order: 1;
 }
 
+.nav-list.hide {
+  display: none;
+}
+
 .nav-list-item {
   display: block;
 }
@@ -69,6 +73,18 @@
   padding: 10px 10px;
 }
 
+.current-section {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  order: 1;
+}
+
+.reservation {
+  order: 0;
+}
+
 .nav-list-item .button,
 .button.brand-logo-btn {
   background: none;
@@ -79,6 +95,11 @@
   color: inherit;
   text-transform: uppercase;
   line-height: normal;
+}
+
+.button.active-nav {
+  background: #ccc;
+  color: #ce3232;
 }
 
 .nav-list-item button {
@@ -558,10 +579,4 @@ li button:focus {
 
 .d-none {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .d-none-md {
-    display: none;
-  }
 }

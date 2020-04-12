@@ -43,6 +43,14 @@
   align-items: center;
 }
 
-.navbar-toggle {
+.d-none-md {
   display: none;
+}
+
+.d-block-md {
+  display: block;
+}
+
+.nav-list.hide {
+  display: flex;
 }
