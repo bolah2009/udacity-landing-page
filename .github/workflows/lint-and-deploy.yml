@@ -41,4 +41,4 @@ jobs:
           email: bola_ahmed2002@yahoo.com
           push-branch: gh-pages
           commit-message: '🚀 Deploy to github pages'
-          rebase: 'true'
+          force-add: 'true'

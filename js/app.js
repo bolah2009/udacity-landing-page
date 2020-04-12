@@ -328,14 +328,13 @@ const navHandler = mainElement => {
   };
 
   const replaceElement = (oldElementID, target) => {
+    if (mainElement.firstChild.id === oldElementID) {
+      return;
+    }
     const newElement = generateFragment(
       oldElementID,
       innerHTMLContent[oldElementID],
     );
-
-    if (mainElement.firstChild.id === oldElementID) {
-      return;
-    }
     mainElement.replaceChild(newElement, mainElement.firstChild);
 
     formatActiveNavBar(oldElementID, target);
@@ -361,60 +360,8 @@ const navHandler = mainElement => {
 
 const mainElement = document.querySelector('main.main');
 const navElement = document.querySelector('nav');
-const parentElement = document.querySelector('main');
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navList = document.querySelector('.nav-list');
-const slideElements = document.querySelectorAll('.preview');
-
-/**
- * @description A slide show function used to toggle a list od elements using the setTimeout function.
- * @example slideShow(elements);
- *
- * @param {NodeList<Element>} elements - List of element to be toggled as slide show.
- * @param {number} activePos - The active position of the slide,
- * this is changed using recursion. The active position is the current element being showed in the
- * slide show, while others is hidden.
- */
-const slideShow = (elements, activePos = 0) => {
-  let [activeIndex, nextIndex] = [activePos, activePos + 1];
-
-  const checkRange = (a, n) => {
-    if (a > elements.length - 1 || a < 0) {
-      return [0, 1];
-    }
-    if (n > elements.length - 1) {
-      return [a, 0];
-    }
-    return [a, n];
-  };
-
-  const changeSlide = (a, n) => {
-    elements[a].classList.remove('active');
-    elements[n].classList.add('active');
-  };
-
-  const isActive = pos => elements[pos].classList.contains('active');
-
-  const findActive = () => {
-    let foundActive = 0;
-    elements.forEach(({ classList }, index) => {
-      if (classList.contains('active')) {
-        foundActive = index;
-      }
-    });
-    const [newActive, newNextActive] = checkRange(foundActive, foundActive + 1);
-    return [newActive, newNextActive];
-  };
-
-  [activeIndex, nextIndex] = checkRange(activeIndex, nextIndex);
-  if (isActive(activeIndex)) {
-    changeSlide(activeIndex, nextIndex);
-  } else {
-    [activeIndex, nextIndex] = findActive();
-    changeSlide(activeIndex, nextIndex);
-  }
-  setTimeout(slideShow, 5000, elements, nextIndex + 1);
-};
 
 /**
  * @description Adds 'scroll' class to the navElement element when the
@@ -440,7 +387,8 @@ const styleNavBar = () => {
  * @example startApp();
  */
 const startApp = () => {
-  document.addEventListener('click', navHandler(parentElement));
+  mainElement.appendChild(generateFragment('home', innerHTMLContent.home));
+  document.addEventListener('click', navHandler(mainElement));
   navElement.addEventListener('click', ({ target: { type, id } }) => {
     if (type === 'button' && id !== 'home-tab') {
       navElement.classList.add('scroll');
@@ -454,8 +402,6 @@ const startApp = () => {
   navList.addEventListener('click', () => {
     navList.classList.add('hide');
   });
-
-  slideShow(slideElements);
 
   document.addEventListener('scroll', styleNavBar, { passive: true });
 };

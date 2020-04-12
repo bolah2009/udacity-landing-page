@@ -83,8 +83,16 @@ h3 a {
   color: #454545;
 }
 
+footer {
+  margin-top: 64px;
+}
+
 footer h2 {
   font-size: 20px;
+}
+
+main {
+  margin-bottom: 32px;
 }
 
 footer a,
