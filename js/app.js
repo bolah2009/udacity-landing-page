@@ -286,6 +286,17 @@ const innerHTMLContent = {
   </div>`,
 };
 
+/**
+ * @description Creates a document fragment.
+ * The document fragment is preferred to improve the performance when
+ * creating or/and appending elements.
+ * @example generateFragment('home', '<div></div>');
+ *
+ * @returns {DocumentFragment} .
+ * @param {string} type - Type of content to be generated can be any of `
+ * home`, `about`, `team`, `contact' or `menu`.
+ * @param {string} content - The innerHTML content of the fragment to be generated.
+ */
 const generateFragment = (type, content) => {
   const currentFragment = document.createDocumentFragment();
 
@@ -297,6 +308,14 @@ const generateFragment = (type, content) => {
   return currentFragment;
 };
 
+/**
+ * @description Handles click event to change page content.
+ * @example document.addEventListener('click', navHandler(parentElement));
+ *
+ * @returns {Function} .
+ * @param {Element} mainElement - Parent element to be manipulated.
+ *
+ */
 const navHandler = mainElement => {
   const formatActiveNavBar = (id, target) => {
     const currentActiveElement = document.querySelector('.active-nav');
@@ -347,6 +366,15 @@ const navbarToggle = document.querySelector('.navbar-toggle');
 const navList = document.querySelector('.nav-list');
 const slideElements = document.querySelectorAll('.preview');
 
+/**
+ * @description A slide show function used to toggle a list od elements using the setTimeout function.
+ * @example slideShow(elements);
+ *
+ * @param {NodeList<Element>} elements - List of element to be toggled as slide show.
+ * @param {number} activePos - The active position of the slide,
+ * this is changed using recursion. The active position is the current element being showed in the
+ * slide show, while others is hidden.
+ */
 const slideShow = (elements, activePos = 0) => {
   let [activeIndex, nextIndex] = [activePos, activePos + 1];
 
@@ -388,6 +416,12 @@ const slideShow = (elements, activePos = 0) => {
   setTimeout(slideShow, 5000, elements, nextIndex + 1);
 };
 
+/**
+ * @description Adds 'scroll' class to the navElement element when the
+ * current page is not the home page and when it's the homepage checks the
+ * scrollY position and adds or remove scroll class accordingly.
+ * @example styleNavBar();
+ */
 const styleNavBar = () => {
   if (mainElement.firstChild.id !== 'home') {
     navElement.classList.add('scroll');
@@ -400,6 +434,11 @@ const styleNavBar = () => {
   }
 };
 
+/**
+ * @description Adds event listeners (click and scroll) to document when the app starts.
+ *
+ * @example startApp();
+ */
 const startApp = () => {
   document.addEventListener('click', navHandler(parentElement));
   navElement.addEventListener('click', ({ target: { type, id } }) => {

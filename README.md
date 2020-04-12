@@ -2,7 +2,7 @@
 
 This is the second project of the [Udacity Frontend Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
-The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-515-eatery) by dynamically rendering it using JavaScript DOM manipulation. JavaScript is used to generate major contents of the website. The features of the page also include:
+The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-515-eatery) by dynamically rendering it using JavaScript DOM manipulation while also displaying the active section been viewed in the navigation menu. JavaScript is used to generate major contents of the website. The features of the page also include:
 
 - HTML
   - HTML5 Semantic elements
@@ -18,14 +18,10 @@ The objective is to re-create a [restaurant homepage](https://templatemo.com/tm-
   - DocumentFragment
   - DOM Manipulation
   - Events
+- Documentation
+  - JSDoc
 
-## Live link
-
-[COMING SOON]
-
-## ScreenShot
-
-[COMING SOON]
+## [Live link](https://bolabuari.com/udacity-landing-page/)
 
 ## Development (Running locally)
 
@@ -91,6 +87,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Design from [Templatemo.com](https://templatemo.com/tm-515-eatery)
 - [Udacity Frontend Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) Team
 
 ## 📝 License
